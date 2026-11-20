@@ -22,7 +22,7 @@ https://github.com/Lzx-qwer/HGNNStudy
 git clone https://github.com/Lzx-qwer/HGNNStudy.git
 ```
 
-从 Hugging Face 下载数据集页面中的 `data.zip`。解压后，项目根目录下应当出现名为 `data` 的文件夹。请避免出现 `data\data\...` 这样的重复层级。
+从 Hugging Face 下载数据集页面中的 `data.zip`。解压后，项目根目录下应当出现名为 `data` 的文件夹。
 
 整理完成后的主要目录如下：
 
@@ -47,7 +47,7 @@ HGNNStudy/
 
 ## 2. 创建 Miniconda 环境
 
-打开 **Miniconda Prompt**，或者已在 PowerShell 中初始化 Conda 的终端。下面的环境名 `dhgbench` 可以按需修改。
+打开 **Miniconda Prompt**，或者已在 PowerShell 中初始化 Conda 的终端。
 
 ```bash
 conda create -n dhgbench -c conda-forge python=3.9.21 pip -y
@@ -61,7 +61,6 @@ python --version
 where python
 ```
 
-第二条命令最后显示的路径应位于当前 Conda 环境中。如果仍指向系统 Python，请重新打开终端并再次执行 `conda activate dhgbench`。
 
 ### 安装项目依赖
 
@@ -104,7 +103,7 @@ python -m pip install -r requirements.txt -f https://data.pyg.org/whl/torch-2.2.
 python -c "import torch, torch_geometric; print('torch:', torch.__version__); print('PyG:', torch_geometric.__version__); print('CUDA:', torch.cuda.is_available())"
 ```
 
-如果有 NVIDIA 显卡，但 `CUDA` 显示为 `False`，优先检查显卡驱动和所安装的 PyTorch 版本，不要继续运行完整实验。
+如果有 NVIDIA 显卡，但 `CUDA` 显示为 `False`，先检查显卡驱动和所安装的 PyTorch 版本，不要继续运行完整实验。
 
 ## 3. 运行第一组节点分类实验
 
@@ -125,7 +124,7 @@ python main.py --dname=cora --task_type=node_cls --method=HGNN --num_seeds=5
 | `--method` | 模型名称 |
 | `--num_seeds` | 随机种子数量；设为 5 时依次运行 seed 0～4，并汇总均值与标准差 |
 
-建议先用 `--num_seeds=1` 做一次快速运行，确认数据读取、CUDA、模型构建和评估流程都正常，再改成 `--num_seeds=5` 获取正式结果：
+可以先用 `--num_seeds=1` 做一次快速运行，确认数据读取、CUDA、模型构建和评估流程都正常，再改成 `--num_seeds=5` 获取正式结果：
 
 ```bash
 python main.py --dname=cora --task_type=node_cls --method=HGNN --num_seeds=1
