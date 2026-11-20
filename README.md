@@ -8,10 +8,9 @@
 https://github.com/Coco-Hut/DHG-Bench
 ```
 
-论文、数据集及官方实现的入口：
+论文、数据集：
 
 - 论文：Fan Li, Xiaoyang Wang, Wenjie Zhang, Ying Zhang, Xuemin Lin. *DHG-Bench: A Comprehensive Benchmark for Deep Hypergraph Learning*. ICLR 2026.
-- 官方代码：`https://github.com/Coco-Hut/DHG-Bench`
 - 数据集：`https://huggingface.co/datasets/Philley/DHG-Bench-dataset`
 
 ## 1. 获取代码与数据
