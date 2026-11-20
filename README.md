@@ -74,12 +74,6 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt -f https://data.pyg.org/whl/torch-2.2.0+cu121.html --extra-index-url https://download.pytorch.org/whl/cu121
 ```
 
-仅有 CPU 的机器可换用：
-
-```bash
-python -m pip install -r requirements.txt -f https://data.pyg.org/whl/torch-2.2.0+cpu.html --extra-index-url https://download.pytorch.org/whl/cpu
-```
-
 本次复现涉及的主要版本如下：
 
 | 组件 | 版本 |
