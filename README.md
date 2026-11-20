@@ -5,7 +5,7 @@
 复现代码来自：
 
 ```text
-https://githubhttps://github.com/Coco-Hut/DHG-Bench
+https://github.com/Coco-Hut/DHG-Bench
 ```
 
 论文、数据集及官方实现的入口：
