@@ -68,7 +68,7 @@ where python
 CUDA 12.1 环境：
 
 ```bash
-cd "D:\你的路径\HGNNStudy\dhgbench"
+cd "D:\HGNNStudy\dhgbench"
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt -f https://data.pyg.org/whl/torch-2.2.0+cu121.html --extra-index-url https://download.pytorch.org/whl/cu121
 ```
@@ -104,7 +104,7 @@ python -c "import torch, torch_geometric; print('torch:', torch.__version__); pr
 
 ```bash
 conda activate dhgbench
-cd "D:\你的路径\HGNNStudy\dhgbench"
+cd "D:\HGNNStudy\dhgbench"
 python main.py --dname=cora --task_type=node_cls --method=HGNN --num_seeds=5
 ```
 
