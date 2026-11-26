@@ -96,7 +96,6 @@ python -m pip install -r requirements.txt -f https://data.pyg.org/whl/torch-2.2.
 python -c "import torch, torch_geometric; print('torch:', torch.__version__); print('PyG:', torch_geometric.__version__); print('CUDA:', torch.cuda.is_available())"
 ```
 
-如果有 NVIDIA 显卡，但 `CUDA` 显示为 `False`，先检查显卡驱动和所安装的 PyTorch 版本，不要继续运行完整实验。
 
 ## 3. 运行第一组节点分类实验
 
