@@ -155,13 +155,13 @@ python main.py --dname=pubmed --task_type=node_cls --method=HyperGCN --num_seeds
 2. `--method` 决定读取哪个模型的 YAML 文件。
 3. `--dname` 决定采用该文件中的哪组数据集超参数。
 
-如果代码提示配置不存在，通常不是环境问题，而是该模型尚未提供当前数据集对应的 YAML。请先检查 `lib_yamls`，再按照相同字段结构补充配置，不要直接套用其他数据集的参数。
+如果代码提示配置不存在，不是环境问题，而是该模型尚未提供当前数据集对应的 YAML。先检查 `lib_yamls`，再按照相同字段结构补充配置，不要直接套用其他数据集的参数。
 
 ## 5. 必须注意的参数兼容问题
 
 上面 README 的部分示例包含 `--is_default=True` 或 `--is_default=False`。当前代码没有把该参数声明为布尔类型，传入的字符串在条件判断中都会被当作真值，因此这两种写法都可能意外启用默认配置。
 
-为保证实验走所选 YAML 配置，复现命令中应完全省略 `--is_default`，让程序使用其默认值 `False`。推荐写法始终是：
+为保证实验走所选 YAML 配置，复现命令中应完全省略 `--is_default`，让程序使用其默认值 `False`。
 
 ```bash
 python main.py --dname=数据集名 --task_type=node_cls --method=模型名 --num_seeds=5
