@@ -161,7 +161,7 @@ python main.py --dname=pubmed --task_type=node_cls --method=HyperGCN --num_seeds
 
 上面 README 的部分示例包含 `--is_default=True` 或 `--is_default=False`。当前代码没有把该参数声明为布尔类型，传入的字符串在条件判断中都会被当作真值，因此这两种写法都可能意外启用默认配置。
 
-为保证实验走所选 YAML 配置，复现命令中应**完全省略** `--is_default`，让程序使用其默认值 `False`。推荐写法始终是：
+为保证实验走所选 YAML 配置，复现命令中应完全省略 `--is_default`，让程序使用其默认值 `False`。推荐写法始终是：
 
 ```bash
 python main.py --dname=数据集名 --task_type=node_cls --method=模型名 --num_seeds=5
